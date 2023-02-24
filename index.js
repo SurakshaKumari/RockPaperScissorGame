@@ -1,6 +1,7 @@
 var paper = 'paper.png';
 var rock ='rock.png';
 var scissor='scissor.png';
+var marks;
 var choice;
  function func(){
     choice = 1;
@@ -19,7 +20,6 @@ var choice;
       choice = 3 ;
     document.getElementById('human').src = scissor;
     computer();
- 
  }
 
 // get random number
@@ -29,18 +29,19 @@ console.log(rnd);
 if(rnd <= 0.333){
     document.getElementById('comp').src = paper;
     if(choice == 1){document.getElementById('result').innerHTML="Tie";}
-    else{document.getElementById('result').innerHTML="Won";}
+    else{document.getElementById('result').innerHTML="Won"; marks=marks+1;}
 }
 else if(rnd <= 0.67 ){
     document.getElementById('comp').src = rock;
-    if(choice == 1){document.getElementById('result').innerHTML="Won";}
+    if(choice == 1){document.getElementById('result').innerHTML="Won"; marks=marks+1;}
     else if(choice == 2){document.getElementById('result').innerHTML="Tie";}
-    else{document.getElementById('result').innerHTML="Lost";}
+    else{document.getElementById('result').innerHTML="Lost"; marks=0; }
 }
 else{
     document.getElementById('comp').src = scissor;
-    if(choice == 1){document.getElementById('result').innerHTML="Won";}
-    else if(choice == 2){document.getElementById('result').innerHTML="Lost";}
+    marks=marks+1;
+    if(choice == 1){document.getElementById('result').innerHTML=marks; }
+    else if(choice == 2){document.getElementById('result').innerHTML="Lost"; marks=0;}
     else{document.getElementById('result').innerHTML="Tie";}
 }
 }
