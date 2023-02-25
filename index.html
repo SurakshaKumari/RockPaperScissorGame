@@ -1,21 +1,26 @@
 <html>
     <head>
-
+<link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
+      <div class="full">
+        <h1>Rock Paper Scissor Game</h1>
+        <div class="btn">
         <button onclick="func()"> Paper</button>
-         <button onclick="func1()"> Rock</button>
-          <button onclick="func2()"> Scissor</button>
+        <button onclick="func1()"> Rock</button>
+        <button onclick="func2()"> Scissor</button>
           </div>
           <div>
-            <img id="human" alt="Human"> 
-            <img id="comp" alt="Computer">
+            <img id="human" > 
+            <img id="comp" >
           </div>
           <div>
             <h1>Result</h1>
-            <p id="result"></p>
+            <p id="settxt"></p>
+            <h3 > SCORE: <h3 id="mark"></h3></h3>
+            
           </div>
+        </div>
           <script src="index.js"></script>
     </body>
 </html>

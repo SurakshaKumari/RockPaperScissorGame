@@ -1,0 +1,7 @@
+body{ align-items: center;
+background-color: rgb(233, 19, 87);
+color: beige;}
+.full{border: 5px solid blueviolet; text-align: center;}
+.btn{height: 100px;}
+button{background-color: rebeccapurple; color: wheat; width: 200px;
+margin-top: 20px;}
